@@ -28,7 +28,10 @@ export default function Home() {
         </div>
 
         <div>
-        <a className="btn btn-lg mb-9" href="https://goo.gl/maps/MXebkeGw7X4iv7Dg8" target="_blank">
+        <a className="btn btn-lg mb-9" 
+        href="https://goo.gl/maps/MXebkeGw7X4iv7Dg8" 
+        target="_blank" 
+        rel="noopener noreferrer">
             <SiGooglemaps size={32} style={{ fill: 'gray' }} />
           <span className="text-white ml-2" >
           Wisma Navina

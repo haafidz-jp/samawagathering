@@ -5,4 +5,4 @@ const BtnKontak = () => {
     </button>
 };
 
-export default BtnKontak; FaWhatsapp
+export default BtnKontak;
