@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import Klok from '@/components/Klok'
+import { SiGooglemaps } from 'react-icons/si'
+
 
 const inter = Inter({ subsets: ['latin'] })
+const targetDate = new Date("2023-02-09").getTime();
 
 export default function Home() {
   return (
@@ -15,51 +19,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+        <div className={styles.grid2}>
+          <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-center">Samawa Family Gathering 2023</h1>
         </div>
 
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
+          <Klok targetDate={targetDate} />
         </div>
 
-        <div className={styles.grid}>
+        <div>
+        <a className="btn btn-lg mb-9" 
+        href="https://goo.gl/maps/MXebkeGw7X4iv7Dg8" 
+        target="_blank" 
+        rel="noopener noreferrer">
+            <SiGooglemaps size={32} style={{ fill: 'gray' }} />
+          <span className="text-white ml-2" >
+          Wisma Navina
+          </span>
+        </a>
+        </div>
+
+        {/* <div className={styles.grid}>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
@@ -116,6 +96,30 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
+        </div> */}
+
+        <div className={styles.description}>
+          {/* <p>
+            Get started by editing&nbsp;
+            <code className={styles.code}>src/pages/index.js</code>
+          </p> */}
+          <div>
+            <a
+              href="https://vercel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hosted By{' '}
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                className={styles.vercelLogo}
+                width={100}
+                height={24}
+                priority
+              />
+            </a>
+          </div>
         </div>
       </main>
     </>
